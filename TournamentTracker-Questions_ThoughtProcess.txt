@@ -1,0 +1,14 @@
+Questions from Lesson 9 (C# Start to Finish By Tim Corey) 
+===========================================================
+Link : https://www.youtube.com/watch?v=5oHfcyrlHeE
+Location on Video : Min 10 Onwards
+
+Questions 
+=========
+1) How do we get that connection information ? (From where we want to know if we are using a sql or a text or another data source for our forms)
+2) How do we conect to two different data sources o fo the same task ?
+
+Temp Solutions:
+1) Statis class for data source information
+2) Interface for data sources
+

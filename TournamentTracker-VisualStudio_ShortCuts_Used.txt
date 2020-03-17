@@ -1,0 +1,10 @@
+ShortCuts For VisualStudio:
+============================
+1)ctor(Press tab tab) creates a constructor
+
+2)prop(Press tab tab) creates a property (Getter setter)
+
+3)Ctrl+. Open up suggestions after clicking on squiggly line errors. 
+	(Ex while we implement an interface and we have not created the definition click on squiggly line and press Ctrl+. and click on implement interface)
+
+4)	
