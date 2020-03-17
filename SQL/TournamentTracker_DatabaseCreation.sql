@@ -6,7 +6,7 @@ BEGIN
 	CREATE DATABASE [Tournaments];
 	PRINT 'Done !!'
 END
-Go
+GO
 
 Use Tournaments	
 GO
