@@ -19,12 +19,8 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-    SELECT Main.[id]
-      ,Main.[FirstName]
-      ,Main.[LastName]
-      ,Main.[EmailAddress]
-      ,Main.[CellPhoneNumber]
-  	FROM dbo.People Main;
+    SELECT Main.*
+	FROM dbo.People Main;
 
 END
 GO
