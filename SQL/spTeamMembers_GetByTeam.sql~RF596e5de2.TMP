@@ -19,13 +19,9 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-    SELECT P.[id]
-      ,P.[FirstName]
-      ,P.[LastName]
-      ,P.[EmailAddress]
-      ,P.[CellPhoneNumber]
+    SELECT TM.*
 	FROM dbo.TeamMembers TM
-	INNER JOIN dbo.People P ON P.id = TM.PersonId
+	INNER JOIN dbo.Teams T ON T.id = TM.TeamId
 	WHERE  TM.TeamId =  @TeamId;
 END
 GO
