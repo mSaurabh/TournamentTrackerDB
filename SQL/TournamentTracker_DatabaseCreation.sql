@@ -80,7 +80,7 @@ BEGIN
 		[MatchupId] [int] NOT NULL,
 		[ParentMatchupId] [int] NULL,
 		[TeamCompetingId] [int] NOT NULL,
-		[Score] [float] NOT NULL,
+		[Score] [float] NULL,
 	 CONSTRAINT [PK_dbo.MatchupEntries] PRIMARY KEY CLUSTERED 
 	(
 		[id] ASC
@@ -92,8 +92,9 @@ IF OBJECT_ID('[dbo].[Matchups]') IS NULL
 BEGIN
 	CREATE TABLE [dbo].[Matchups](
 		[id] [int] IDENTITY(1,1) NOT NULL,
-		[WinnerId] [int] NOT NULL,
-		[MatchUpRound] [nvarchar](50) NOT NULL,
+		[TournamentId] [int] NOT NULL,
+		[WinnerId] [int] NULL,
+		[MatchUpRound] INT NOT NULL,
 	 CONSTRAINT [PK_dbo.Matchups] PRIMARY KEY CLUSTERED 
 	(
 		[id] ASC
@@ -225,13 +226,26 @@ GO
 IF OBJECT_ID('[FK_Matchups_WinnerId]') IS NULL
 BEGIN
 	ALTER TABLE [dbo].[Matchups]  WITH CHECK ADD  CONSTRAINT [FK_Matchups_WinnerId] FOREIGN KEY([WinnerId])
-	REFERENCES [dbo].[Teams] ([id])
+	REFERENCES [dbo].[People] ([id])
 END
 GO
 
 IF OBJECT_ID('[FK_Matchups_WinnerId]') IS NULL
 BEGIN
 	ALTER TABLE [dbo].[Matchups] CHECK CONSTRAINT [FK_Matchups_WinnerId]
+END
+GO
+
+IF OBJECT_ID('[FK_Matchups_TournamentId]') IS NULL
+BEGIN
+	ALTER TABLE [dbo].[Matchups]  WITH CHECK ADD  CONSTRAINT [FK_Matchups_TournamentId] FOREIGN KEY([TournamentId])
+	REFERENCES [dbo].[Tournaments] ([id])
+END
+GO
+
+IF OBJECT_ID('[FK_Matchups_TournamentId]') IS NULL
+BEGIN
+	ALTER TABLE [dbo].[Matchups] CHECK CONSTRAINT [FK_Matchups_TournamentId]
 END
 GO
 
