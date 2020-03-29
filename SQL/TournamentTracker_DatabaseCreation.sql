@@ -79,7 +79,7 @@ BEGIN
 		[id] [int] IDENTITY(1,1) NOT NULL,
 		[MatchupId] [int] NOT NULL,
 		[ParentMatchupId] [int] NULL,
-		[TeamCompetingId] [int] NOT NULL,
+		[TeamCompetingId] [int] NULL,
 		[Score] [float] NULL,
 	 CONSTRAINT [PK_dbo.MatchupEntries] PRIMARY KEY CLUSTERED 
 	(

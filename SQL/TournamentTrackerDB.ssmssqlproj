@@ -25,11 +25,23 @@
           <AssociatedConnUserName />
           <FullPath>spMatchupEntries_GetByMatchup.sql</FullPath>
         </FileNode>
+        <FileNode Name="spMatchupEntries_Insert.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>spMatchupEntries_Insert.sql</FullPath>
+        </FileNode>
         <FileNode Name="spMatchups_GetByTournament.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>spMatchups_GetByTournament.sql</FullPath>
+        </FileNode>
+        <FileNode Name="spMatchups_Insert.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>spMatchups_Insert.sql</FullPath>
         </FileNode>
         <FileNode Name="spPeople_GetAll.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
