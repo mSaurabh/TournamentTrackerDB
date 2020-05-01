@@ -20,10 +20,9 @@ BEGIN
 	SET NOCOUNT ON;
 
     SELECT Main.*
-	FROM dbo.MatchupEntries Main
-	INNER JOIN dbo.Teams T ON T.id = Main.TeamCompetingId
-	INNER JOIN dbo.TournamentEntries TE ON TE.TeamId = T.id
-	WHERE TE.TournamentId = @TournamentId
+	FROM dbo.Matchups Main
+	WHERE Main.TournamentId = @TournamentId
+	ORDER BY Main.MatchUpRound ASC;
 
 END
 GO

@@ -21,8 +21,7 @@ BEGIN
 
     SELECT Main.*
 	FROM dbo.MatchupEntries Main
-	INNER JOIN dbo.Matchups M ON M.id = Main.MatchupId
-	WHERE M.id = @MatchupId
+	WHERE Main.MatchupId = @MatchupId;
 
 END
 GO

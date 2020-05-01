@@ -24,6 +24,7 @@ BEGIN
 		[id] [int] IDENTITY(1,1) NOT NULL,
 		[TournamentName] [nvarchar](50) NOT NULL,
 		[EntryFee] [money] NOT NULL,
+		[Active] [bit] DEFAULT 1,
 	 CONSTRAINT [PK_dbo.Tournament] PRIMARY KEY CLUSTERED 
 	(
 		[id] ASC

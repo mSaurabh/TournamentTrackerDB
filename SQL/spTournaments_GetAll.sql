@@ -20,7 +20,8 @@ BEGIN
 	SET NOCOUNT ON;
 
     SELECT Main.*
-	FROM dbo.Tournaments Main;
+	FROM dbo.Tournaments Main
+	WHERE Active = 1;
 
 END
 GO
