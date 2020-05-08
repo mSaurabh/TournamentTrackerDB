@@ -227,7 +227,7 @@ GO
 IF OBJECT_ID('[FK_Matchups_WinnerId]') IS NULL
 BEGIN
 	ALTER TABLE [dbo].[Matchups]  WITH CHECK ADD  CONSTRAINT [FK_Matchups_WinnerId] FOREIGN KEY([WinnerId])
-	REFERENCES [dbo].[People] ([id])
+	REFERENCES [dbo].[Teams] ([id])
 END
 GO
 
